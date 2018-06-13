@@ -18,4 +18,11 @@ public class FruitsFactory {
         return fruits;
     }
 
+    public Fruits reflectionFruits(String name) throws Exception {
+        Fruits fruits = null;
+        fruits = (Fruits) Class.forName(name).newInstance();
+
+        return fruits;
+    }
+
 }
